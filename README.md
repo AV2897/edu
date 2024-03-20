@@ -1,1 +1,1 @@
-Educational website
+Education
