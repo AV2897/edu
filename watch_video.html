@@ -4,12 +4,12 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>watch video</title>
+   <title>Watch Video</title>
 
-   <!-- font awesome cdn link  -->
+   <!-- Font Awesome CDN link -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
-   <!-- custom css file link  -->
+   <!-- Custom CSS file link -->
    <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -17,18 +17,18 @@
 
 
 <section class="edit-comment">
-   <h1 class="heading">edti comment</h1>
+   <h1 class="heading">Edit Comment</h1>
    <form action="" method="post">
       <input type="hidden" name="update_id" value="">
-      <textarea name="update_box" class="box" maxlength="1000" required placeholder="please enter your comment" cols="30" rows="10"></textarea>
+      <textarea name="update_box" class="box" maxlength="1000" required placeholder="Please enter your comment" cols="30" rows="10"></textarea>
       <div class="flex">
-         <a href="watch_video.php?get_id=" class="inline-option-btn">cancel edit</a>
-         <input type="submit" value="update now" name="update_now" class="inline-btn">
+         <a href="watch_video.php?get_id=" class="inline-option-btn">Cancel Edit</a>
+         <input type="submit" value="Update Now" name="update_now" class="inline-btn">
       </div>
    </form>
 </section>
 
-<!-- watch video section starts  -->
+<!-- Watch Video section starts -->
 
 <section class="watch-video">
 
@@ -37,7 +37,7 @@
       <h3 class="title"></h3>
       <div class="info">
          <p><i class="fas fa-calendar"></i><span></span></p>
-         <p><i class="fas fa-heart"></i><span> likes</span></p>
+         <p><i class="fas fa-heart"></i><span> Likes</span></p>
       </div>
       <div class="tutor">
          <img src="uploaded_files/" alt="">
@@ -48,9 +48,9 @@
       </div>
       <form action="" method="post" class="flex">
          <input type="hidden" name="content_id" value="">
-         <a href="playlist.php?get_id=" class="inline-btn">view playlist</a>
-         <button type="submit" name="like_content"><i class="fas fa-heart"></i><span>liked</span></button>
-         <button type="submit" name="like_content"><i class="far fa-heart"></i><span>like</span></button>
+         <a href="playlist.php?get_id=" class="inline-btn">View Playlist</a>
+         <button type="submit" name="like_content"><i class="fas fa-heart"></i><span>Liked</span></button>
+         <button type="submit" name="like_content"><i class="far fa-heart"></i><span>Like</span></button>
          
       </form>
       <div class="description"><p></p></div>
@@ -58,21 +58,21 @@
    
 </section>
 
-<!-- watch video section ends -->
+<!-- Watch Video section ends -->
 
-<!-- comments section starts  -->
+<!-- Comments section starts -->
 
 <section class="comments">
 
-   <h1 class="heading">add a comment</h1>
+   <h1 class="heading">Add a Comment</h1>
 
    <form action="" method="post" class="add-comment">
       <input type="hidden" name="content_id" value="">
-      <textarea name="comment_box" required placeholder="write your comment..." maxlength="1000" cols="30" rows="10"></textarea>
-      <input type="submit" value="add comment" name="add_comment" class="inline-btn">
+      <textarea name="comment_box" required placeholder="Write your comment..." maxlength="1000" cols="30" rows="10"></textarea>
+      <input type="submit" value="Add Comment" name="add_comment" class="inline-btn">
    </form>
 
-   <h1 class="heading">user comments</h1>
+   <h1 class="heading">User Comments</h1>
 
    
    <div class="show-comments">
@@ -87,18 +87,18 @@
          <p class="text"></p>
          <form action="" method="post" class="flex-btn">
             <input type="hidden" name="comment_id" value="">
-            <button type="submit" name="edit_comment" class="inline-option-btn">edit comment</button>
-            <button type="submit" name="delete_comment" class="inline-delete-btn" onclick="return confirm('delete this comment?');">delete comment</button>
+            <button type="submit" name="edit_comment" class="inline-option-btn">Edit Comment</button>
+            <button type="submit" name="delete_comment" class="inline-delete-btn" onclick="return confirm('Delete this comment?');">Delete Comment</button>
          </form>
-            </div>
       </div>
+   </div>
    
 </section>
 
-<!-- comments section ends -->
+<!-- Comments section ends -->
 
 
-<!-- custom js file link  -->
+<!-- Custom JS file link -->
 <script src="js/script.js"></script>
    
 </body>
