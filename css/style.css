@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap');
 
 :root {
-   --main-color: #0997b7;
+   --main-color: #7FC7D9;
    --red: #FF6868;
    --yellow: #FFBB64;
    --white: #fff;
@@ -27,12 +27,12 @@
 }
 
 *::-webkit-scrollbar {
-   height: .5rem;
+   height: .1rem;
    width: 1rem;
 }
 
 *::-webkit-scrollbar-track {
-   background-color: transparent;
+   background-color: var(--lg-blue);
 }
 
 *::-webkit-scrollbar-thumb {
@@ -46,6 +46,8 @@ html {
 
 body {
    background-color: var(--light-bg);
+   padding-left: 30rem;
+   transition: .3s ease-in-out;
 }
 
 body.dark {
@@ -58,6 +60,7 @@ body.dark {
 
 body.active {
    padding-left: 0;
+   transition: all .3s ease-in-out;
 }
 
 section {
@@ -72,7 +75,7 @@ section {
 .inline-btn,
 .inline-option-btn,
 .inline-delete-btn {
-   border-radius: .5rem;
+   border-radius: 1rem;
    padding: 1rem 3rem;
    font-size: 1.8rem;
    color: #fff;
@@ -81,6 +84,7 @@ section {
    cursor: pointer;
    text-align: center;
    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+   transition: .3s ease-in-out;
 }
 
 .btn,
@@ -121,6 +125,7 @@ section {
 .inline-delete-btn:hover {
    background-color: var(--black);
    color: var(--white);
+   scale: 1.07;
 }
 
 .flex-btn {
@@ -209,7 +214,7 @@ section {
 
 .header .flex .search-form {
    width: 50rem;
-   border-radius: .5rem;
+   border-radius: 7rem;
    display: flex;
    align-items: center;
    gap: 2rem;
@@ -221,24 +226,25 @@ section {
    width: 100%;
    background: none;
    font-size: 2rem;
-   color: var(--black);
+   color: var(--blue);
 }
 
 .header .flex .search-form button {
    font-size: 2rem;
-   color: var(--black);
+   color: var(--blue);
    cursor: pointer;
    background: none;
 }
 
 .header .flex .search-form button:hover {
+   scale: 1.2;
    color: var(--main-color);
 }
 
 .header .flex .icons div {
-   font-size: 2rem;
+   font-size: 1.7rem;
    color: var(--black);
-   border-radius: .5rem;
+   border-radius: 2rem;
    height: 4.5rem;
    cursor: pointer;
    width: 4.5rem;
@@ -305,26 +311,26 @@ section {
 }
 
 .side-bar .close-side-bar {
-   text-align: right;
-   padding: 2rem;
+   padding: 1rem;
    padding-bottom: 0;
    display: none;
 }
 
-.side-bar .close-side-bar i {
-   height: 4.5rem;
-   width: 4.5rem;
-   line-height: 4.4rem;
-   font-size: 2.5rem;
-   color: #fff;
-   cursor: pointer;
-   background-color: var(--red);
+.side-bar .close-side-bar i .fa-times {
+   height: 4rem;
+   width: 4rem;
    text-align: center;
-   border-radius: .5rem;
+   font-size: 3rem;
+   color: var(--blue);
+   cursor: pointer;
+   border-radius: 3rem;
+   background-color: var(--main-color);
+   padding: .5rem;
+   transition: .3s ease;
 }
 
-.side-bar .close-side-bar i:hover {
-   background-color: var(--black);
+.side-bar .close-side-bar i .fa-times:hover {
+   scale: 1.2;
 }
 
 .side-bar .profile {
@@ -429,6 +435,7 @@ section {
    border-radius: .5rem;
    font-size: 1.6rem;
    background-color: var(--light-bg);
+   transition: .3s ease-in-out;
 }
 
 .quick-select .box-container .box .flex a i {
@@ -441,6 +448,7 @@ section {
 }
 
 .quick-select .box-container .box .flex a:hover {
+   scale: 1.05;
    background-color: var(--black);
 }
 
@@ -1488,7 +1496,7 @@ section {
    font-size: 2rem;
    margin-top: 1.5rem;
    z-index: 1000;
-   /* padding-bottom: 9.5rem; */
+   padding-bottom: 9.5rem;
 }
 
 .footer span {
