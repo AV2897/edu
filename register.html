@@ -1,52 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>home</title>
+   <title>Home</title>
 
-   <!-- font awesome cdn link  -->
+   <!-- Font Awesome CDN link -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
-   <!-- custom css file link  -->
+   <!-- Custom CSS file link -->
    <link rel="stylesheet" href="css/style.css">
-
 </head>
-
 <body>
 
-   <section class="form-container">
-
-      <form class="register" action="" method="post" enctype="multipart/form-data">
-         <h3>create account</h3>
-         <div class="flex">
-            <div class="col">
-               <p>Your name <span>*</span></p>
-               <input type="text" name="name" placeholder="Enter your name" maxlength="50" required class="box">
-               <p>Your password <span>*</span></p>
-               <input type="password" name="pass" placeholder="Enter your password" maxlength="20" required class="box">
-            </div>
-            <div class="col">
-               <p>Your email <span>*</span></p>
-               <input type="email" name="email" placeholder="Enter your email" maxlength="20" required class="box">
-               <p>Confirm password <span>*</span></p>
-               <input type="password" name="cpass" placeholder="confirm your password" maxlength="20" required
-                  class="box">
-            </div>
+<section class="form-container">
+   <form class="register" action="" method="post" enctype="multipart/form-data">
+      <h3>Create Account</h3>
+      <div class="flex">
+         <div class="col">
+            <p>Your Name <span>*</span></p>
+            <input type="text" name="name" placeholder="Enter your name" maxlength="50" required class="box">
+            <p>Your Password <span>*</span></p>
+            <input type="password" name="pass" placeholder="Enter your password" maxlength="20" required class="box">
          </div>
-         <p>Select pic <span>*</span></p>
-         <input type="file" name="image" accept="image/*" required class="box">
-         <p class="link">already have an account? <a href="login.php">login now</a></p>
-         <input type="submit" name="submit" value="register now" class="btn">
-      </form>
+         <div class="col">
+            <p>Your Email <span>*</span></p>
+            <input type="email" name="email" placeholder="Enter your email" maxlength="50" required class="box">
+            <p>Confirm Password <span>*</span></p>
+            <input type="password" name="cpass" placeholder="Confirm your password" maxlength="20" required class="box">
+         </div>
+      </div>
+      <p>Select Picture <span>*</span></p>
+      <input type="file" name="image" accept="image/*" required class="box">
+      <p class="link">Already have an account? <a href="login.php">Login now</a></p>
+      <input type="submit" name="submit" value="Register Now" class="btn">
+   </form>
+</section>
 
-   </section>
-
-   <!-- custom js file link  -->
-   <script src="js/script.js"></script>
+<!-- Custom JS file link -->
+<script src="js/script.js"></script>
 
 </body>
-
 </html>
