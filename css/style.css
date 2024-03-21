@@ -9,7 +9,7 @@
    --black: #2c3e50;
    --blue: #365486;
    --light-color: #0F1035;
-   --light-bg: #faf9f9;
+   --light-bg: #e9e9e9;
    --border: .2rem solid rgba(0, 0, 0, .2);
 }
 
@@ -54,14 +54,14 @@ body {
 body.dark {
    --white: #222;
    --black: #fff;
-   --light-color: #aaa;
+   --light-color: #f1efef;
    --light-bg: #333;
    --border: .1rem solid rgba(255, 255, 255, .2);
 }
 
 body.active {
    padding-left: 0;
-   transition: all .3s ease-in-out;
+   transition: .3s ease-in-out;
 }
 
 section {
@@ -309,6 +309,7 @@ section {
    background-color: var(--white);
    border-right: var(--border);
    z-index: 1200;
+   transition: .3s linear;
 }
 
 .side-bar .close-side-bar {
@@ -1372,6 +1373,7 @@ section {
 
 .form-container .register {
    width: 80rem;
+   flex-direction: row;
 }
 
 .form-container form h3 {
@@ -1513,7 +1515,7 @@ section {
    }
 
    .side-bar {
-      transition: .2s linear;
+      transition: .3s linear;
       left: -30rem;
    }
 
