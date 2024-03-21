@@ -1,56 +1,54 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>teachers</title>
+   <title>Teachers</title>
 
-   <!-- font awesome cdn link  -->
+   <!-- Font Awesome CDN link -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
-   <!-- custom css file link  -->
+   <!-- Custom CSS file link -->
    <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
 
-
-<!-- teachers section starts  -->
+<!-- Teachers section starts -->
 
 <section class="teachers">
 
-   <h1 class="heading">expert tutors</h1>
+   <h1 class="heading">Expert Tutors</h1>
 
    <form action="search_tutor.php" method="post" class="search-tutor">
-      <input type="text" name="search_tutor" maxlength="100" placeholder="search tutor..." required>
+      <input type="text" name="search_tutor" maxlength="100" placeholder="Search Tutor..." required>
       <button type="submit" name="search_tutor_btn" class="fas fa-search"></button>
    </form>
 
    <div class="box-container">
 
       <div class="box offer">
-         <h3>become a tutor</h3>
+         <h3>Become a Tutor</h3>
          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum, magnam!</p>
-         <a href="admin/register.php" class="inline-btn">get started</a>
+         <a href="admin/register.php" class="inline-btn">Get Started</a>
       </div>
 
       <div class="box">
          <div class="tutor">
-            <img src="uploaded_files/" alt="">
+            <img src="uploaded_files/default_profile_picture.jpg" alt="Tutor Profile Picture">
             <div>
-               <h3></h3>
-               <span></span>
+               <h3>Tutor Name</h3>
+               <span>Tutor Title or Description</span>
             </div>
          </div>
-         <p>playlists : <span></span></p>
-         <p>total videos : <span></span></p>
-         <p>total likes : <span></span></p>
-         <p>total comments : <span></span></p>
+         <p>Playlists: <span></span></p>
+         <p>Total Videos: <span></span></p>
+         <p>Total Likes: <span></span></p>
+         <p>Total Comments: <span></span></p>
          <form action="tutor_profile.php" method="post">
             <input type="hidden" name="tutor_email" value="">
-            <input type="submit" value="view profile" name="tutor_fetch" class="inline-btn">
+            <input type="submit" value="View Profile" name="tutor_fetch" class="inline-btn">
          </form>
       </div>
       
@@ -58,10 +56,11 @@
 
 </section>
 
-<!-- teachers section ends -->
+<!-- Teachers section ends -->
 
-<!-- custom js file link  -->
+<!-- Custom JS file link -->
 <script src="js/script.js"></script>
    
 </body>
 </html>
+
