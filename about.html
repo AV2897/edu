@@ -15,10 +15,67 @@
 </head>
 
 <body>
+   <header class="header">
 
+      <section class="flex">
 
+         <a href="home.html" class="logo">Edusphere</a>
 
-   <!-- about section starts  -->
+         <form action="search_course.html" method="post" class="search-form">
+            <input type="text" name="search_course" placeholder="search courses" required maxlength="100">
+            <button type="submit" class="fas fa-search" name="search_course_btn"></button>
+         </form>
+
+         <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="search-btn" class="fas fa-search"></div>
+            <div id="user-btn" class="fas fa-user"></div>
+            <div id="toggle-btn" class="fas fa-sun"></div>
+         </div>
+
+         <div class="profile">
+            <img src="images/pic-5.jpg" alt="profile image">
+            <h3>Ayesha</h3>
+            <span>Student</span>
+            <a href="profile.html" class="btn">View profile</a>
+            <div class="flex-btn">
+               <a href="login.html" class="option-btn">Login</a>
+               <a href="register.html" class="option-btn">Register</a>
+            </div>
+            <a href="components/user_logout.html" onclick="return confirm('logout from this website?');"
+               class="delete-btn">Logout</a>
+            <!-- <h3>Please Login or Register</h3>
+            <div class="flex-btn">
+               <a href="login.html" class="option-btn">Login</a>
+               <a href="register.html" class="option-btn">Register</a>
+            </div> -->
+         </div>
+
+      </section>
+
+   </header>
+
+   <div class="side-bar">
+
+      <div class="close-side-bar">
+         <i><span class="fas fa-times"></span></i>
+      </div>
+
+      <div class="profile">
+         <img src="images/pic-5.jpg" height="70px" alt="profile image">
+         <h3>Ayesha</h3>
+         <span>Student</span>
+         <a href="profile.html" class="btn">View profile</a>
+      </div>
+      <nav class="navbar">
+         <a href="home.html"><i class="fas fa-home"></i><span>Home</span></a>
+         <a href="about.html"><i class="fas fa-question"></i><span>About Us</span></a>
+         <a href="courses.html"><i class="fas fa-graduation-cap"></i><span>Courses</span></a>
+         <a href="teachers.html"><i class="fas fa-chalkboard-user"></i><span>Teachers</span></a>
+         <a href="contact.html"><i class="fas fa-envelope"></i><span>Contact</span></a>
+      </nav>
+
+   </div>
 
    <section class="about">
 
@@ -29,7 +86,6 @@
          </div>
 
          <div class="content">
-            <h3>Why Choose Us?</h3>
             <h3>Why Choose Us?</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nobis distinctio, nisi consequatur ad
                sequi, rem odit fugiat assumenda eligendi iure aut sunt ratione, tempore porro expedita quisquam.</p>
@@ -211,6 +267,7 @@
    </section>
 
    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+   <script src="js/swiper.js"></script>
    <script src="js/script.js"></script>
 
 </body>

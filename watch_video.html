@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,93 +14,153 @@
    <link rel="stylesheet" href="css/style.css">
 
 </head>
+
 <body>
 
 
-<section class="edit-comment">
-   <h1 class="heading">Edit Comment</h1>
-   <form action="" method="post">
-      <input type="hidden" name="update_id" value="">
-      <textarea name="update_box" class="box" maxlength="1000" required placeholder="Please enter your comment" cols="30" rows="10"></textarea>
-      <div class="flex">
-         <a href="watch_video.php?get_id=" class="inline-option-btn">Cancel Edit</a>
-         <input type="submit" value="Update Now" name="update_now" class="inline-btn">
-      </div>
-   </form>
-</section>
-
-<!-- Watch Video section starts -->
-
-<section class="watch-video">
-
-   <div class="video-details">
-      <video src="uploaded_files/" class="video" poster="uploaded_files/" controls autoplay></video>
-      <h3 class="title"></h3>
-      <div class="info">
-         <p><i class="fas fa-calendar"></i><span></span></p>
-         <p><i class="fas fa-heart"></i><span> Likes</span></p>
-      </div>
-      <div class="tutor">
-         <img src="uploaded_files/" alt="">
-         <div>
-            <h3></h3>
-            <span></span>
+   <section class="edit-comment">
+      <h1 class="heading">Edit Comment</h1>
+      <form action="" method="post">
+         <input type="hidden" name="update_id" value="">
+         <textarea name="update_box" class="box" maxlength="1000" required placeholder="Please enter your comment"
+            cols="30" rows="10"></textarea>
+         <div class="flex">
+            <a href="watch_video.php?get_id=" class="inline-option-btn">Cancel Edit</a>
+            <input type="submit" value="Update Now" name="update_now" class="inline-btn">
          </div>
-      </div>
-      <form action="" method="post" class="flex">
-         <input type="hidden" name="content_id" value="">
-         <a href="playlist.php?get_id=" class="inline-btn">View Playlist</a>
-         <button type="submit" name="like_content"><i class="fas fa-heart"></i><span>Liked</span></button>
-         <button type="submit" name="like_content"><i class="far fa-heart"></i><span>Like</span></button>
-         
       </form>
-      <div class="description"><p></p></div>
-   </div>
-   
-</section>
+   </section>
 
-<!-- Watch Video section ends -->
+   <!-- Watch Video section starts -->
 
-<!-- Comments section starts -->
+   <section class="watch-video">
+      <header class="header">
 
-<section class="comments">
+         <section class="flex">
 
-   <h1 class="heading">Add a Comment</h1>
+            <a href="home.html" class="logo">Edusphere</a>
 
-   <form action="" method="post" class="add-comment">
-      <input type="hidden" name="content_id" value="">
-      <textarea name="comment_box" required placeholder="Write your comment..." maxlength="1000" cols="30" rows="10"></textarea>
-      <input type="submit" value="Add Comment" name="add_comment" class="inline-btn">
-   </form>
+            <form action="search_course.html" method="post" class="search-form">
+               <input type="text" name="search_course" placeholder="search courses" required maxlength="100">
+               <button type="submit" class="fas fa-search" name="search_course_btn"></button>
+            </form>
 
-   <h1 class="heading">User Comments</h1>
+            <div class="icons">
+               <div id="menu-btn" class="fas fa-bars"></div>
+               <div id="search-btn" class="fas fa-search"></div>
+               <div id="user-btn" class="fas fa-user"></div>
+               <div id="toggle-btn" class="fas fa-sun"></div>
+            </div>
 
-   
-   <div class="show-comments">
-      <div class="box" style="">
-         <div class="user">
+            <div class="profile">
+               <img src="images/pic-5.jpg" alt="profile image">
+               <h3>Ayesha</h3>
+               <span>Student</span>
+               <a href="profile.html" class="btn">View profile</a>
+               <div class="flex-btn">
+                  <a href="login.html" class="option-btn">Login</a>
+                  <a href="register.html" class="option-btn">Register</a>
+               </div>
+               <a href="components/user_logout.html" onclick="return confirm('logout from this website?');"
+                  class="delete-btn">Logout</a>
+               <!-- <h3>Please Login or Register</h3>
+            <div class="flex-btn">
+               <a href="login.html" class="option-btn">Login</a>
+               <a href="register.html" class="option-btn">Register</a>
+            </div> -->
+            </div>
+
+         </section>
+
+      </header>
+
+      <div class="side-bar">
+
+         <div class="close-side-bar">
+            <i><span class="fas fa-times"></span></i>
+         </div>
+
+         <div class="profile">
+            <img src="images/pic-5.jpg" height="70px" alt="profile image">
+            <h3>Ayesha</h3>
+            <span>Student</span>
+            <a href="profile.html" class="btn">View profile</a>
+         </div>
+         <nav class="navbar">
+            <a href="home.html"><i class="fas fa-home"></i><span>Home</span></a>
+            <a href="about.html"><i class="fas fa-question"></i><span>About Us</span></a>
+            <a href="courses.html"><i class="fas fa-graduation-cap"></i><span>Courses</span></a>
+            <a href="teachers.html"><i class="fas fa-chalkboard-user"></i><span>Teachers</span></a>
+            <a href="contact.html"><i class="fas fa-envelope"></i><span>Contact</span></a>
+         </nav>
+
+      </div>
+
+      <div class="video-details">
+         <video src="uploaded_files/" class="video" poster="uploaded_files/" controls autoplay></video>
+         <h3 class="title"></h3>
+         <div class="info">
+            <p><i class="fas fa-calendar"></i><span></span></p>
+            <p><i class="fas fa-heart"></i><span> Likes</span></p>
+         </div>
+         <div class="tutor">
             <img src="uploaded_files/" alt="">
             <div>
                <h3></h3>
                <span></span>
             </div>
          </div>
-         <p class="text"></p>
-         <form action="" method="post" class="flex-btn">
-            <input type="hidden" name="comment_id" value="">
-            <button type="submit" name="edit_comment" class="inline-option-btn">Edit Comment</button>
-            <button type="submit" name="delete_comment" class="inline-delete-btn" onclick="return confirm('Delete this comment?');">Delete Comment</button>
+         <form action="" method="post" class="flex">
+            <input type="hidden" name="content_id" value="">
+            <a href="playlist.php?get_id=" class="inline-btn">View Playlist</a>
+            <button type="submit" name="like_content"><i class="fas fa-heart"></i><span>Liked</span></button>
+            <button type="submit" name="like_content"><i class="far fa-heart"></i><span>Like</span></button>
+
          </form>
+         <div class="description">
+            <p></p>
+         </div>
       </div>
-   </div>
-   
-</section>
 
-<!-- Comments section ends -->
+   </section>
 
 
-<!-- Custom JS file link -->
-<script src="js/script.js"></script>
-   
+   <section class="comments">
+
+      <h1 class="heading">Add a Comment</h1>
+
+      <form action="" method="post" class="add-comment">
+         <input type="hidden" name="content_id" value="">
+         <textarea name="comment_box" required placeholder="Write your comment..." maxlength="1000" cols="30"
+            rows="10"></textarea>
+         <input type="submit" value="Add Comment" name="add_comment" class="inline-btn">
+      </form>
+
+      <h1 class="heading">User Comments</h1>
+
+
+      <div class="show-comments">
+         <div class="box" style="">
+            <div class="user">
+               <img src="uploaded_files/" alt="">
+               <div>
+                  <h3></h3>
+                  <span></span>
+               </div>
+            </div>
+            <p class="text"></p>
+            <form action="" method="post" class="flex-btn">
+               <input type="hidden" name="comment_id" value="">
+               <button type="submit" name="edit_comment" class="inline-option-btn">Edit Comment</button>
+               <button type="submit" name="delete_comment" class="inline-delete-btn"
+                  onclick="return confirm('Delete this comment?');">Delete Comment</button>
+            </form>
+         </div>
+      </div>
+
+   </section>
+   <script src="js/script.js"></script>
+
 </body>
+
 </html>
