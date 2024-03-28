@@ -21,7 +21,7 @@
 
 
    <?php
-   include '../components/admin_header.php';
+   include '../components/footer.php';
    ?>
 
    <script src="../js/admin_script.js"></script>

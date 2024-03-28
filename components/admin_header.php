@@ -12,7 +12,7 @@
 
         <section class="flex">
 
-            <a href="home.html" class="logo">Edusphere</a>
+            <a href="dashboard.php" class="logo">Admin</a>
 
             <form action="search_course.php" method="post" class="search-form">
                 <input type="text" name="search_course" placeholder="search courses" required maxlength="100">
