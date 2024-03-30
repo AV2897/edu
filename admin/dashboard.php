@@ -5,6 +5,7 @@ if (isset($_COOKIE['tutor_id'])) {
    $tutor_id = $_COOKIE['tutor_id'];
 } else {
    $tutor_id = '';
+   header('location:login.php');
 }
 
 $count_content = $conn->prepare("SELECT * FROM 'content' WHERE tutor_id = ?");
@@ -17,7 +18,7 @@ $count_like = $conn->prepare("SELECT * FROM 'like' WHERE tutor_id = ?");
 $total_likes = $count_like->rowCount();
 
 $count_comments = $conn->prepare("SELECT * FROM comments' WHERE tutor_id = ?");
-$total_pcomments = $count_comments->rowCount();
+$total_comments = $count_comments->rowCount();
 ?>
 
 <!DOCTYPE html>
@@ -38,37 +39,45 @@ $total_pcomments = $count_comments->rowCount();
    include '../components/admin_header.php';
    ?>
 
-   <div class="dashboard">
+   <section class="dashboard">
       <h1 class="heading">Dashboard</h1>
+      <div class="box-container">
          <div class="box">
             <h3>Welcome</h3>
-            <p><?=$fetch_profile['name'];?></p>
+            <p><?= $fetch_profile['name']; ?></p>
             <a href="profile.php" class="btn">View Profile</a>
          </div>
          <div class="box">
-            <h3><?=$total_contents;?></h3>
+            <h3><?= $total_contents; ?></h3>
             <p>Contents Uploaded</p>
             <a href="add_content.php" class="btn">Add Content</a>
          </div>
-         </div>
          <div class="box">
-            <h3><?=$total_playlists;?></h3>
+            <h3><?= $total_playlists; ?></h3>
             <p>playlists Uploaded</p>
             <a href="add_playlist.php" class="btn">Add Playlist</a>
          </div>
-         </div>
          <div class="box">
-            <h3><?=$total_likes;?></h3>
+            <h3><?= $total_likes; ?></h3>
             <p>Likes</p>
-            <a href="add_likes.php" class="btn">View Content</a>
-         </div>
+            <a href="contents.php" class="btn">View Content</a>
          </div>
          <div class="box">
-            <h3><?=$total_comments;?></h3>
+            <h3><?= $total_comments; ?></h3>
             <p>Comments</p>
             <a href="comments.php" class="btn">View Comments</a>
          </div>
-   </div>
+
+         <div class="box">
+            <h3>Quick Links</h3>
+            <p>Login or Register</p>
+            <div class="flex-btn">
+               <a href="login.php" class="option-btn">Login</a>
+               <a href="register.php" class="option-btn">Register</a>
+            </div>
+         </div>
+      </div>
+   </section>
 
 
    <script src="../js/admin_script.js"></script>
