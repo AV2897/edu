@@ -55,11 +55,11 @@ if (isset($_POST['submit'])) {
     <section class="form-container">
 
         <form action="" method="post" enctype="multipart/form-data" class="login">
-            <h3>Welcome</h3>
+            <h3>Welcome To Edusphere</h3>
             <p>Email <span>*</span></p>
-            <input type="email" name="email" placeholder="enter your email" maxlength="20" required class="box">
+            <input type="email" name="email" placeholder="Enter your email" maxlength="50" required class="box">
             <p>Password <span>*</span></p>
-            <input type="password" name="pass" placeholder="enter your password" maxlength="20" required class="box">
+            <input type="password" name="pass" placeholder="Enter your password" maxlength="20" required class="box">
             <p class="link">Don't have an account? <a href="register.php">Register Now</a></p>
             <input type="submit" name="submit" value="login now" class="btn">
         </form>

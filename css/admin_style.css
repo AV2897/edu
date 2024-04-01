@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap');
 
 :root {
-   --main-color: #7FC7D9;
+   --main-color: #60a3b4;
    --red: #FF6868;
    --yellow: #FFBB64;
    --white: #fff;
@@ -48,6 +48,7 @@ body{
 }
 
 body.dark{
+   --main-color: #7FC7D9;
    --white:#222;
    --black:#fff;
    --light-color:#f1efef;
