@@ -28,9 +28,9 @@ if(isset($_POST['delete'])){
    $delete_bookmark->execute([$delete_id]);
    $delete_playlist = $conn->prepare("DELETE FROM `playlist` WHERE id = ?");
    $delete_playlist->execute([$delete_id]);
-   $message[] = 'playlist deleted!';
+   $message[] = 'DPlaylist deleted!';
    }else{
-      $message[] = 'playlist already deleted!';
+      $message[] = 'Playlist already deleted!';
    }
 }
 
@@ -53,7 +53,7 @@ if(isset($_POST['delete'])){
 
 <section class="playlists">
 
-   <h1 class="heading">Added Playlists</h1>
+   <h1 class="heading">Playlists</h1>
 
    <div class="box-container">
    
@@ -86,14 +86,14 @@ if(isset($_POST['delete'])){
          <form action="" method="post" class="flex-btn">
             <input type="hidden" name="playlist_id" value="<?= $playlist_id; ?>">
             <a href="update_playlist.php?get_id=<?= $playlist_id; ?>" class="option-btn">Update</a>
-            <input type="submit" value="Delete" class="delete-btn" onclick="return confirm('delete this playlist?');" name="delete">
+            <input type="submit" value="Delete" class="delete-btn" onclick="return confirm('Do you want delete playlist?');" name="delete">
          </form>
          <a href="view_playlist.php?get_id=<?= $playlist_id; ?>" class="btn">View Playlist</a>
       </div>
       <?php
          } 
       }else{
-         echo '<p class="empty">no playlist added yet!</p>';
+         echo '<p class="empty">No Playlist Yet</p>';
       }
       ?>
 

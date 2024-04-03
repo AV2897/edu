@@ -158,25 +158,12 @@ if(isset($_POST['delete_comment'])){
       <?php
        }
       }else{
-         echo '<p class="empty">no comments added yet!</p>';
+         echo '<p class="empty">No Comments</p>';
       }
       ?>
       </div>
    
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
-<?php include '../components/footer.php'; ?>
 
 <script src="../js/admin_script.js"></script>
 

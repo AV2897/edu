@@ -32,7 +32,7 @@ if (isset($_POST['submit'])) {
 
    move_uploaded_file($image_tmp_name, $image_folder);
 
-   $message[] = 'new playlist created!';
+   $message[] = 'New Playlist Created!';
 }
 
 ?>

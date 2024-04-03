@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap');
 
 :root {
-   --main-color: #60a3b4;
+   --main-color: #5dbad1;
    --red: #FF6868;
    --yellow: #FFBB64;
    --white: #fff;
@@ -21,7 +21,7 @@
 }
 
 *::selection{
-   color: var(--main-color);
+   color: var(--red);
 }
 *::-webkit-scrollbar {
    height: .1rem;
@@ -491,7 +491,7 @@ section{
    color: var(--light-color);
    padding: 1rem 1.5rem;
    border-radius: .5rem;
-   background-color: var(--light-bg);
+   /* background-color: var(--light-bg); */
    margin: 1rem 0;
 }
 
