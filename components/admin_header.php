@@ -99,6 +99,4 @@ if (isset($message)) {
         <a href="../components/admin_logout.php" onclick="return confirm('Want to logout?');"><i class="fas fa-right-from-bracket"></i><span>Logout</span></a>
     </nav>
 </div>
-
-
 </html>
