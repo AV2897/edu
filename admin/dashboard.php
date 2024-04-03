@@ -1,86 +1,92 @@
 <?php
 
 include '../components/connect.php';
-if (isset($_COOKIE['tutor_id'])) {
+
+if(isset($_COOKIE['tutor_id'])){
    $tutor_id = $_COOKIE['tutor_id'];
-} else {
+}else{
    $tutor_id = '';
    header('location:login.php');
 }
 
-$count_content = $conn->prepare("SELECT * FROM 'content' WHERE tutor_id = ?");
-$total_contents = $count_content->rowCount();
+$select_contents = $conn->prepare("SELECT * FROM `content` WHERE tutor_id = ?");
+$select_contents->execute([$tutor_id]);
+$total_contents = $select_contents->rowCount();
 
-$count_playlist = $conn->prepare("SELECT * FROM 'playlist' WHERE tutor_id = ?");
-$total_playlists = $count_playlist->rowCount();
+$select_playlists = $conn->prepare("SELECT * FROM `playlist` WHERE tutor_id = ?");
+$select_playlists->execute([$tutor_id]);
+$total_playlists = $select_playlists->rowCount();
 
-$count_like = $conn->prepare("SELECT * FROM 'like' WHERE tutor_id = ?");
-$total_likes = $count_like->rowCount();
+$select_likes = $conn->prepare("SELECT * FROM `likes` WHERE tutor_id = ?");
+$select_likes->execute([$tutor_id]);
+$total_likes = $select_likes->rowCount();
 
-$count_comments = $conn->prepare("SELECT * FROM comments' WHERE tutor_id = ?");
-$total_comments = $count_comments->rowCount();
+$select_comments = $conn->prepare("SELECT * FROM `comments` WHERE tutor_id = ?");
+$select_comments->execute([$tutor_id]);
+$total_comments = $select_comments->rowCount();
+
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
    <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Dashboard</title>
 
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-   <link rel="stylesheet" href="../css/admin_style.css">
-</head>
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="../css/admin_style.css">
+
+</head>
 <body>
 
-   <?php
-   include '../components/admin_header.php';
-   ?>
+<?php include '../components/admin_header.php'; ?>
+   
+<section class="dashboard">
 
-   <section class="dashboard">
-      <h1 class="heading">Dashboard</h1>
-      <div class="box-container">
-         <div class="box">
-            <h3>Welcome</h3>
-            <p><?= $fetch_profile['name']; ?></p>
-            <a href="profile.php" class="btn">View Profile</a>
-         </div>
-         <div class="box">
-            <h3><?= $total_contents; ?></h3>
-            <p>Contents Uploaded</p>
-            <a href="add_content.php" class="btn">Add Content</a>
-         </div>
-         <div class="box">
-            <h3><?= $total_playlists; ?></h3>
-            <p>playlists Uploaded</p>
-            <a href="add_playlist.php" class="btn">Add Playlist</a>
-         </div>
-         <div class="box">
-            <h3><?= $total_likes; ?></h3>
-            <p>Likes</p>
-            <a href="contents.php" class="btn">View Content</a>
-         </div>
-         <div class="box">
-            <h3><?= $total_comments; ?></h3>
-            <p>Comments</p>
-            <a href="comments.php" class="btn">View Comments</a>
-         </div>
+   <h1 class="heading">dashboard</h1>
 
-         <div class="box">
-            <h3>Quick Links</h3>
-            <p>Login or Register</p>
-            <div class="flex-btn">
-               <a href="login.php" class="option-btn">Login</a>
-               <a href="register.php" class="option-btn">Register</a>
-            </div>
-         </div>
+   <div class="box-container">
+
+      <div class="box">
+         <h3>Welcome To Edusphere</h3>
+         <p class="welcome_name"><?= $fetch_profile['name']; ?></p>
+         <a href="profile.php" class="btn">View Profile</a>
       </div>
-   </section>
+
+      <div class="box">
+         <h3><?= $total_contents; ?></h3>
+         <p>Total Content</p>
+         <a href="add_content.php" class="btn">Add Content</a>
+      </div>
+
+      <div class="box">
+         <h3><?= $total_playlists; ?></h3>
+         <p>Total Playlists</p>
+         <a href="add_playlist.php" class="btn">Add Playlist</a>
+      </div>
+
+      <div class="box">
+         <h3><?= $total_likes; ?></h3>
+         <p>Total Likes</p>
+         <a href="contents.php" class="btn">View Content</a>
+      </div>
+
+      <div class="box">
+         <h3><?= $total_comments; ?></h3>
+         <p>Total Comments</p>
+         <a href="comments.php" class="btn">View Comments</a>
+      </div>
+   </div>
+
+</section>
 
 
-   <script src="../js/admin_script.js"></script>
+<script src="../js/admin_script.js"></script>
+
 </body>
-
 </html>
