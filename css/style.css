@@ -373,13 +373,13 @@ section {
 .side-bar .navbar a span {
    color: var(--light-color);
 }
-
-.side-bar .navbar a:hover {
+.side-bar .navbar a:hover{
    background-color: var(--light-bg);
 }
 
-.side-bar .navbar a:hover i {
+.side-bar .navbar a:hover i{
    margin-right: 2.5rem;
+   scale: 1.4;
 }
 
 .side-bar.active {

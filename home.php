@@ -105,10 +105,6 @@ $total_bookmarked = $select_bookmark->rowCount();
 
 </section>
 
-<!-- quick select section ends -->
-
-<!-- courses section starts  -->
-
 <section class="courses">
 
    <h1 class="heading">latest courses</h1>
@@ -152,23 +148,6 @@ $total_bookmarked = $select_bookmark->rowCount();
    </div>
 
 </section>
-
-<!-- courses section ends -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
 <script src = "js/script.js"></script>
 </body>
 </html>
