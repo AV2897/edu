@@ -26,8 +26,8 @@ if (isset($message)) {
         </div>
         <div class="profile">
             <?php
-            $select_profile = $conn->prepare("SELECT * FROM `users` WHERE id = ?");
-            $select_profile->execute([$user_id]);
+            $select_profile = $conn->prepare("SELECT * FROM `tutors` WHERE id = ?");
+            $select_profile->execute([$tutor_id]);
             if ($select_profile->rowCount() > 0) {
                 $fetch_profile = $select_profile->fetch(PDO::FETCH_ASSOC);
             ?>
