@@ -93,11 +93,11 @@ if(isset($_POST['remove'])){
          <?php
             }
          }else{
-            echo '<p class="emtpy">content was not found!</p>';         
+            echo '<p class="emtpy">No content</p>';         
          }
       }
    }else{
-      echo '<p class="empty">nothing added to likes yet!</p>';
+      echo '<p class="empty">No liked videos</p>';
    }
    ?>
 
@@ -105,10 +105,6 @@ if(isset($_POST['remove'])){
       </div>
 
    </section>
-
-   <!-- Liked videos section ends -->
-
-   <!-- Custom JS file link -->
    <script src="js/script.js"></script>
 
 </body>

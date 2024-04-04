@@ -23,11 +23,11 @@ if(isset($_POST['submit'])){
    $select_contact->execute([$name, $email, $number, $msg]);
 
    if($select_contact->rowCount() > 0){
-      $message[] = 'message sent already!';
+      $message[] = 'Message already sent';
    }else{
       $insert_message = $conn->prepare("INSERT INTO `contact`(name, email, number, message) VALUES(?,?,?,?)");
       $insert_message->execute([$name, $email, $number, $msg]);
-      $message[] = 'message sent successfully!';
+      $message[] = 'Message sent successfully!';
    }
 
 }
@@ -41,11 +41,7 @@ if(isset($_POST['submit'])){
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Contact</title>
-
-   <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-
-   <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -69,7 +65,7 @@ if(isset($_POST['submit'])){
                name="number" class="box">
             <textarea name="msg" class="box" placeholder="Enter Your Message" required cols="30" rows="10"
                maxlength="1000"></textarea>
-            <input type="submit" value="send message" class="inline-btn" name="submit">
+            <input type="submit" value="Send Message" class="inline-btn" name="submit">
          </form>
 
       </div>

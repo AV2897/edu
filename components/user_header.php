@@ -15,7 +15,7 @@ if (isset($message)) {
     <sectio0n class="flex">
         <a href="home.php" class="logo">Edusphere</a>
         <form action="search_course.php" method="post" class="search-form">
-            <input type="text" name="search_course" placeholder="search courses" required maxlength="100">
+            <input type="text" name="search_course" placeholder="Search Course" required maxlength="100">
             <button type="submit" class="fas fa-search" name="search_course_btn"></button>
         </form>
         <div class="icons">
@@ -26,20 +26,20 @@ if (isset($message)) {
         </div>
         <div class="profile">
             <?php
-            $select_profile = $conn->prepare("SELECT * FROM `tutors` WHERE id = ?");
-            $select_profile->execute([$tutor_id]);
+            $select_profile = $conn->prepare("SELECT * FROM `users` WHERE id = ?");
+            $select_profile->execute([$user_id]);
             if ($select_profile->rowCount() > 0) {
                 $fetch_profile = $select_profile->fetch(PDO::FETCH_ASSOC);
             ?>
-                <img src="uploaded_files/<?= $fetch_profile['image']; ?>" alt="">
+                <img src="uploaded_files/<?= $fetch_profile['image']; ?>" alt="user profile">
                 <h3><?= $fetch_profile['name']; ?></h3>
-                <span><?= $fetch_profile['profession']; ?></span>
+                <span>Student</span>
                 <a href="profile.php" class="btn">View Profile</a>
-                <div class="flex-btn">
+                <!-- <div class="flex-btn">
                     <a href="login.php" class="option-btn">Login</a>
                     <a href="register.php" class="option-btn">Register</a>
-                </div>
-                <a href="components/user_logout.php" onclick="return confirm('Want to logout?');" class="delete-btn">logout</a>
+                </div> -->
+                <a href="components/user_logout.php" onclick="return confirm('Want to logout?');" class="delete-btn">Logout</a>
             <?php
             } else {
             ?>
@@ -64,14 +64,14 @@ if (isset($message)) {
 
     <div class="profile">
         <?php
-        $select_profile = $conn->prepare("SELECT * FROM `tutors` WHERE id = ?");
+        $select_profile = $conn->prepare("SELECT * FROM `users` WHERE id = ?");
         $select_profile->execute([$user_id]);
         if ($select_profile->rowCount() > 0) {
             $fetch_profile = $select_profile->fetch(PDO::FETCH_ASSOC);
         ?>
             <img src="uploaded_files/<?= $fetch_profile['image']; ?>" alt="">
             <h3><?= $fetch_profile['name']; ?></h3>
-            <span><?= $fetch_profile['profession']; ?></span>
+            <span>Student</span>
             <a href="profile.php" class="btn">View Profile</a>
         <?php
         } else {

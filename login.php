@@ -23,7 +23,7 @@ if (isset($_POST['submit'])) {
       setcookie('user_id', $row['id'], time() + 60 * 60 * 24 * 30, '/');
       header('location:home.php');
    } else {
-      $message[] = 'incorrect email or password!';
+      $message[] = 'Incorrect email or password!';
    }
 }
 
@@ -43,17 +43,17 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
-
    <?php include 'components/user_header.php'; ?>
    <section class="form-container">
 
-      <form action="home.html" method="post" enctype="multipart/form-data" class="login">
+
+      <form action="home.php" method="post" enctype="multipart/form-data" class="login">
          <h3>Welcome To Edusphere</h3>
          <p>Your email <span>*</span></p>
          <input type="email" name="email" placeholder="Enter your email" maxlength="50" required class="box">
          <p>Your password <span>*</span></p>
          <input type="password" name="pass" placeholder="Enter your password" maxlength="20" required class="box">
-         <p class="link">Don't have an account? <a href="register.html">Register now</a></p>
+         <p class="link">Don't have an account? <a href="register.php">Register now</a></p>
          <input type="submit" name="submit" value="Login now" class="btn">
       </form>
 
