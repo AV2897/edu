@@ -60,11 +60,9 @@ if(isset($_POST['tutor_fetch'])){
 
 <?php include 'components/user_header.php'; ?>
 
-<!-- teachers profile section starts  -->
-
 <section class="tutor-profile">
 
-   <h1 class="heading">profile details</h1>
+   <h1 class="heading">Profile</h1>
 
    <div class="details">
       <div class="tutor">
@@ -73,10 +71,10 @@ if(isset($_POST['tutor_fetch'])){
          <span><?= $fetch_tutor['profession']; ?></span>
       </div>
       <div class="flex">
-         <p>total playlists : <span><?= $total_playlists; ?></span></p>
-         <p>total videos : <span><?= $total_contents; ?></span></p>
-         <p>total likes : <span><?= $total_likes; ?></span></p>
-         <p>total comments : <span><?= $total_comments; ?></span></p>
+         <p>Playlists : <span><?= $total_playlists; ?></span></p>
+         <p>Videos : <span><?= $total_contents; ?></span></p>
+         <p>Likes : <span><?= $total_likes; ?></span></p>
+         <p>Comments : <span><?= $total_comments; ?></span></p>
       </div>
    </div>
 
@@ -123,11 +121,6 @@ if(isset($_POST['tutor_fetch'])){
    </div>
 
 </section>
-
-<!-- courses section ends -->
-
-
-<!-- custom js file link  -->
 <script src="js/script.js"></script>
    
 </body>

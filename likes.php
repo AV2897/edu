@@ -30,35 +30,29 @@ if(isset($_POST['remove'])){
 }
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>liked videos</title>
-
-   <!-- font awesome cdn link  -->
+   <title>Liked Videos</title>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-
-   <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
-
 </head>
+
 <body>
 
-<?php include 'components/user_header.php'; ?>
+   <?php include 'components/user_header.php'; ?>
 
-<!-- courses section starts  -->
+   <section class="liked-videos">
 
-<section class="liked-videos">
+      <h1 class="heading">Liked Videos</h1>
 
-   <h1 class="heading">liked videos</h1>
+      <div class="box-container">
 
-   <div class="box-container">
-
-   <?php
+         <?php
       $select_likes = $conn->prepare("SELECT * FROM `likes` WHERE user_id = ?");
       $select_likes->execute([$user_id]);
       if($select_likes->rowCount() > 0){
@@ -74,39 +68,45 @@ if(isset($_POST['remove'])){
                $select_tutors->execute([$fetch_contents['tutor_id']]);
                $fetch_tutor = $select_tutors->fetch(PDO::FETCH_ASSOC);
    ?>
-   <div class="box">
-      <div class="tutor">
-         <img src="uploaded_files/<?= $fetch_tutor['image']; ?>" alt="">
-         <div>
-            <h3><?= $fetch_tutor['name']; ?></h3>
-            <span><?= $fetch_contents['date']; ?></span>
+         <div class="box">
+            <div class="tutor">
+               <img src="uploaded_files/<?= $fetch_tutor['image']; ?>" alt="">
+               <div>
+                  <h3>
+                     <?= $fetch_tutor['name']; ?>
+                  </h3>
+                  <span>
+                     <?= $fetch_contents['date']; ?>
+                  </span>
+               </div>
+            </div>
+            <img src="uploaded_files/<?= $fetch_contents['thumb']; ?>" alt="" class="thumb">
+            <h3 class="title">
+               <?= $fetch_contents['title']; ?>
+            </h3>
+            <form action="" method="post" class="flex-btn">
+               <input type="hidden" name="content_id" value="<?= $fetch_contents['id']; ?>">
+               <a href="watch_video.php?get_id=<?= $fetch_contents['id']; ?>" class="inline-btn">watch video</a>
+               <input type="submit" value="remove" class="inline-delete-btn" name="remove">
+            </form>
          </div>
-      </div>
-      <img src="uploaded_files/<?= $fetch_contents['thumb']; ?>" alt="" class="thumb">
-      <h3 class="title"><?= $fetch_contents['title']; ?></h3>
-      <form action="" method="post" class="flex-btn">
-         <input type="hidden" name="content_id" value="<?= $fetch_contents['id']; ?>">
-         <a href="watch_video.php?get_id=<?= $fetch_contents['id']; ?>" class="inline-btn">watch video</a>
-         <input type="submit" value="remove" class="inline-delete-btn" name="remove">
-      </form>
-   </div>
-   <?php
+         <?php
             }
          }else{
-            echo '<p class="emtpy">content was not found!</p>';         
+            echo '<p class="emtpy">No content</p>';         
          }
       }
    }else{
-      echo '<p class="empty">nothing added to likes yet!</p>';
+      echo '<p class="empty">No liked videos</p>';
    }
    ?>
 
-   </div>
 
-</section>
+      </div>
 
-<!-- custom js file link  -->
-<script src="js/script.js"></script>
-   
+   </section>
+   <script src="js/script.js"></script>
+
 </body>
+
 </html>

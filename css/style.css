@@ -373,13 +373,13 @@ section {
 .side-bar .navbar a span {
    color: var(--light-color);
 }
-
-.side-bar .navbar a:hover {
+.side-bar .navbar a:hover{
    background-color: var(--light-bg);
 }
 
-.side-bar .navbar a:hover i {
+.side-bar .navbar a:hover i{
    margin-right: 2.5rem;
+   scale: 1.4;
 }
 
 .side-bar.active {
@@ -395,7 +395,7 @@ section {
 }
 
 .quick-select .box-container .box {
-   border-radius: .5rem;
+   border-radius: 1rem;
    background-color: var(--white);
    padding: 2rem;
 }
@@ -436,7 +436,7 @@ section {
    border-radius: .5rem;
    font-size: 1.6rem;
    background-color: var(--light-bg);
-   transition: .3s ease-in-out;
+   transition: .2s ease-in-out;
 }
 
 .quick-select .box-container .box .flex a i {
@@ -506,7 +506,7 @@ section {
    border-radius: .5rem;
    height: 20rem;
    object-fit: cover;
-   margin-bottom: .3rem;
+   margin-bottom: .2rem;
 }
 
 .courses .box-container .box .title {

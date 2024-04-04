@@ -11,18 +11,13 @@ if (isset($message)) {
 }
 ?>
 
-
 <header class="header">
-
     <sectio0n class="flex">
-
         <a href="home.php" class="logo">Edusphere</a>
-
         <form action="search_course.php" method="post" class="search-form">
-            <input type="text" name="search_course" placeholder="search courses" required maxlength="100">
+            <input type="text" name="search_course" placeholder="Search Course" required maxlength="100">
             <button type="submit" class="fas fa-search" name="search_course_btn"></button>
         </form>
-
         <div class="icons">
             <div id="menu-btn" class="fas fa-bars"></div>
             <div id="search-btn" class="fas fa-search"></div>
@@ -32,26 +27,26 @@ if (isset($message)) {
         <div class="profile">
             <?php
             $select_profile = $conn->prepare("SELECT * FROM `tutors` WHERE id = ?");
-            $select_profile->execute([$user_id]);
+            $select_profile->execute([$tutor_id]);
             if ($select_profile->rowCount() > 0) {
                 $fetch_profile = $select_profile->fetch(PDO::FETCH_ASSOC);
             ?>
-                <img src="uploaded_files/<?= $fetch_profile['image']; ?>" alt="">
+                <img src="uploaded_files/<?= $fetch_profile['image']; ?>" alt="user profile">
                 <h3><?= $fetch_profile['name']; ?></h3>
-                <span><?= $fetch_profile['profession']; ?></span>
-                <a href="profile.php" class="btn">view profile</a>
-                <div class="flex-btn">
-                    <a href="login.php" class="option-btn">login</a>
-                    <a href="register.php" class="option-btn">register</a>
-                </div>
-                <a href="components/user_logout.php" onclick="return confirm('logout from this website?');" class="delete-btn">logout</a>
+                <span>Student</span>
+                <a href="profile.php" class="btn">View Profile</a>
+                <!-- <div class="flex-btn">
+                    <a href="login.php" class="option-btn">Login</a>
+                    <a href="register.php" class="option-btn">Register</a>
+                </div> -->
+                <a href="components/user_logout.php" onclick="return confirm('Want to logout?');" class="delete-btn">Logout</a>
             <?php
             } else {
             ?>
-                <h3>please login or register</h3>
+                <h3>Please login or register</h3>
                 <div class="flex-btn">
-                    <a href="login.php" class="option-btn">login</a>
-                    <a href="register.php" class="option-btn">register</a>
+                    <a href="login.php" class="option-btn">Login</a>
+                    <a href="register.php" class="option-btn">Register</a>
                 </div>
             <?php
             }
@@ -69,15 +64,15 @@ if (isset($message)) {
 
     <div class="profile">
         <?php
-        $select_profile = $conn->prepare("SELECT * FROM `tutors` WHERE id = ?");
+        $select_profile = $conn->prepare("SELECT * FROM `users` WHERE id = ?");
         $select_profile->execute([$user_id]);
         if ($select_profile->rowCount() > 0) {
             $fetch_profile = $select_profile->fetch(PDO::FETCH_ASSOC);
         ?>
             <img src="uploaded_files/<?= $fetch_profile['image']; ?>" alt="">
             <h3><?= $fetch_profile['name']; ?></h3>
-            <span><?= $fetch_profile['profession']; ?></span>
-            <a href="profile.php" class="btn">view profile</a>
+            <span>Student</span>
+            <a href="profile.php" class="btn">View Profile</a>
         <?php
         } else {
         ?>
@@ -93,10 +88,10 @@ if (isset($message)) {
 
     <nav class="navbar">
         <a href="home.php"><i class="fas fa-home"></i><span>Home</span></a>
-        <a href="about.php"><i class="fas fa-question"></i><span>about</span></a>
-        <a href="courses.php"><i class="fas fa-graduation-cap"></i><span>courses</span></a>
-        <a href="teachers.php"><i class="fas fa-chalkboard-user"></i><span>teachers</span></a>
-        <a href="contact.php"><i class="fas fa-headset"></i><span>contact</span></a>
+        <a href="about.php"><i class="fas fa-question"></i><span>About</span></a>
+        <a href="courses.php"><i class="fas fa-graduation-cap"></i><span>Courses</span></a>
+        <a href="teachers.php"><i class="fas fa-chalkboard-user"></i><span>Teachers</span></a>
+        <a href="contact.php"><i class="fas fa-headset"></i><span>Contact</span></a>
     </nav>
 </div>
 </html>
