@@ -86,7 +86,7 @@ if(isset($_POST['remove'])){
             </h3>
             <form action="" method="post" class="flex-btn">
                <input type="hidden" name="content_id" value="<?= $fetch_contents['id']; ?>">
-               <a href="watch_video.php?get_id=<?= $fetch_contents['id']; ?>" class="inline-btn">watch video</a>
+               <a href="watch_video.php?get_id=<?= $fetch_contents['id']; ?>" class="inline-btn">Watch Video</a>
                <input type="submit" value="remove" class="inline-delete-btn" name="remove">
             </form>
          </div>
