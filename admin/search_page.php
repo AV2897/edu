@@ -55,7 +55,7 @@ if(isset($_POST['delete_playlist'])){
    $delete_bookmark->execute([$delete_id]);
    $delete_playlist = $conn->prepare("DELETE FROM `playlist` WHERE id = ?");
    $delete_playlist->execute([$delete_id]);
-   $message[] = 'playlist deleted!';
+   $message[] = 'Playlist deleted!';
    }else{
       $message[] = 'Playlist does not exits';
    }
@@ -84,7 +84,7 @@ if(isset($_POST['delete_playlist'])){
    
 <section class="contents">
 
-   <h1 class="heading">contents</h1>
+   <h1 class="heading">Contents</h1>
 
    <div class="box-container">
 
@@ -106,10 +106,10 @@ if(isset($_POST['delete_playlist'])){
          <h3 class="title"><?= $fecth_videos['title']; ?></h3>
          <form action="" method="post" class="flex-btn">
             <input type="hidden" name="video_id" value="<?= $video_id; ?>">
-            <a href="update_content.php?get_id=<?= $video_id; ?>" class="option-btn">update</a>
+            <a href="update_content.php?get_id=<?= $video_id; ?>" class="option-btn">Update</a>
             <input type="submit" value="delete" class="delete-btn" onclick="return confirm('delete this video?');" name="delete_video">
          </form>
-         <a href="view_content.php?get_id=<?= $video_id; ?>" class="btn">view content</a>
+         <a href="view_content.php?get_id=<?= $video_id; ?>" class="btn">View Content</a>
       </div>
    <?php
          }

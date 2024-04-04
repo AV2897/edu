@@ -16,11 +16,11 @@ if (isset($message)) {
 
     <sectio0n class="flex">
 
-        <a href="dashboard.php" class="logo">Admin</a>
+        <a href="dashboard.php" class="logo">Admin.</a>
 
-        <form action="search_course.php" method="post" class="search-form">
-            <input type="text" name="search_course" placeholder="search courses" required maxlength="100">
-            <button type="submit" class="fas fa-search" name="search_course_btn"></button>
+        <form action="search_page.php" method="post" class="search-form">
+            <input type="text" name="search" placeholder="search here..." required maxlength="100">
+            <button type="submit" class="fas fa-search" name="search_btn"></button>
         </form>
 
         <div class="icons">
@@ -99,4 +99,5 @@ if (isset($message)) {
         <a href="../components/admin_logout.php" onclick="return confirm('Want to logout?');"><i class="fas fa-right-from-bracket"></i><span>Logout</span></a>
     </nav>
 </div>
+
 </html>

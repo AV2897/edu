@@ -38,21 +38,20 @@ if(isset($_COOKIE['user_id'])){
          </div>
 
          <div class="content">
-            <h3>Why Choose Us?</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nobis distinctio, nisi consequatur ad
-               sequi, rem odit fugiat assumenda eligendi iure aut sunt ratione, tempore porro expedita quisquam.</p>
-            <a href="courses.html" class="inline-btn">our courses</a>
+            <h3>About Us</h3>
+            <p>Welcome to Edusphere! Whether you're a student seeking knowledge or a tutor looking to share your expertise, our website offers a seamless learning experience. As a student, you can access a educational videos. Teachers have the privilege to create and manage playlists, add videos with descriptions and thumbnails. Our website also features a dark mode and is fully responsive for optimal viewing experience. <br> Join us today to embark on your educational journey!"</p>
+            <a href="courses.html" class="inline-btn">Our Courses</a>
          </div>
 
       </div>
 
-      <div class="box-container">
+      <!-- <div class="box-container">
 
          <div class="box">
             <i class="fas fa-graduation-cap"></i>
             <div>
                <h3>+1k</h3>
-               <span>online courses</span>
+               <span>Online courses</span>
             </div>
          </div>
 
@@ -60,7 +59,7 @@ if(isset($_COOKIE['user_id'])){
             <i class="fas fa-user-graduate"></i>
             <div>
                <h3>+25k</h3>
-               <span>brilliants students</span>
+               <span>Brilliants students</span>
             </div>
          </div>
 
@@ -68,7 +67,7 @@ if(isset($_COOKIE['user_id'])){
             <i class="fas fa-chalkboard-user"></i>
             <div>
                <h3>+5k</h3>
-               <span>expert teachers</span>
+               <span>Expert teachers</span>
             </div>
          </div>
 
@@ -80,7 +79,7 @@ if(isset($_COOKIE['user_id'])){
             </div>
          </div>
 
-      </div>
+      </div> -->
 
    </section>
 
@@ -92,9 +91,7 @@ if(isset($_COOKIE['user_id'])){
             <div class="swiper-wrapper">
                <div class="swiper-slide">
                   <div class="box">
-                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo fugiat, quaerat voluptate odio
-                        consectetur
-                        assumenda fugit maxime unde at ex?</p>
+                     <p>"As a teacher, Edusphere's platform streamlined content sharing and engagement. It's been a pleasure being part of this educational journey!"</p>
                      <div class="user">
                         <img src="images/pic-2.jpg" alt="">
                         <div>
@@ -112,9 +109,7 @@ if(isset($_COOKIE['user_id'])){
                </div>
                <div class="swiper-slide">
                   <div class="box">
-                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo fugiat, quaerat voluptate odio
-                        consectetur
-                        assumenda fugit maxime unde at ex?</p>
+                     <p>"Edusphere's user-friendly interface and personalized features make learning enjoyable. The dark mode option is a lifesaver!"</p>
                      <div class="user">
                         <img src="images/pic-3.jpg" alt="">
                         <div>
@@ -132,9 +127,7 @@ if(isset($_COOKIE['user_id'])){
                </div>
                <div class="swiper-slide">
                   <div class="box">
-                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo fugiat, quaerat voluptate odio
-                        consectetur
-                        assumenda fugit maxime unde at ex?</p>
+                     <p>"Edusphere made learning accessible anytime, anywhere. The ability to save videos for later viewing kept me organized and on track."</p>
                      <div class="user">
                         <img src="images/pic-4.jpg" alt="">
                         <div>
@@ -152,9 +145,7 @@ if(isset($_COOKIE['user_id'])){
                </div>
                <div class="swiper-slide">
                   <div class="box">
-                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo fugiat, quaerat voluptate odio
-                        consectetur
-                        assumenda fugit maxime unde at ex?</p>
+                     <p>Edusphere's intuitive platform helped me stay motivated and engaged in my studies. The progress tracking feature kept me accountable and focused."</p>
                      <div class="user">
                         <img src="images/pic-5.jpg" alt="">
                         <div>
@@ -172,9 +163,7 @@ if(isset($_COOKIE['user_id'])){
                </div>
                <div class="swiper-slide">
                   <div class="box">
-                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo fugiat, quaerat voluptate odio
-                        consectetur
-                        assumenda fugit maxime unde at ex?</p>
+                     <p>"Edusphere's commitment to education is unmatched. It's more than just a website; it's a catalyst for growth and development."</p>
                      <div class="user">
                         <img src="images/pic-6.jpg" alt="">
                         <div>
@@ -192,9 +181,7 @@ if(isset($_COOKIE['user_id'])){
                </div>
                <div class="swiper-slide">
                   <div class="box">
-                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo fugiat, quaerat voluptate odio
-                        consectetur
-                        assumenda fugit maxime unde at ex?</p>
+                     <p>"Thanks to Edusphere, I discovered new passions and interests through its diverse course offerings. It's a gateway to endless learning opportunities."</p>
                      <div class="user">
                         <img src="images/pic-7.jpg" alt="">
                         <div>
