@@ -193,7 +193,7 @@ if(isset($_COOKIE['user_id'])){
                               <i class="fas fa-star"></i>
                               <i class="fas fa-star-half-alt"></i>
                            </div>
-                        </div>
+                        </div>-
                      </div>
                   </div>
                </div>

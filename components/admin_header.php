@@ -39,11 +39,7 @@ if (isset($message)) {
                 <img src="../uploaded_files/<?= $fetch_profile['image']; ?>" alt="">
                 <h3><?= $fetch_profile['name']; ?></h3>
                 <span><?= $fetch_profile['profession']; ?></span>
-                <a href="profile.php" class="btn">view profile</a>
-                <div class="flex-btn">
-                    <a href="login.php" class="option-btn">login</a>
-                    <a href="register.php" class="option-btn">register</a>
-                </div>
+                <a href="profile.php" class="btn">View Profile</a>
                 <a href="../components/admin_logout.php" onclick="return confirm('logout from this website?');" class="delete-btn">logout</a>
             <?php
             } else {

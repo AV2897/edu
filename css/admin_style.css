@@ -21,7 +21,7 @@
 }
 
 *::selection{
-   color: var(--red);
+   color: var(--main-color);
 }
 *::-webkit-scrollbar {
    height: .1rem;

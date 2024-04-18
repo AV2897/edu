@@ -85,6 +85,7 @@ section {
    text-align: center;
    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
    transition: .3s ease-in-out;
+   text-transform: capitalize;
 }
 
 .btn,
@@ -131,6 +132,7 @@ section {
 .flex-btn {
    display: flex;
    gap: 1rem;
+   text-transform: capitalize;
 }
 
 .message {
@@ -227,6 +229,7 @@ section {
    background: none;
    font-size: 2rem;
    color: var(--blue);
+   text-transform: capitalize;
 }
 
 .header .flex .search-form button {
@@ -1068,6 +1071,7 @@ section {
    font-size: 1.8rem;
    color: var(--black);
    background: none;
+   text-transform: capitalize;
 }
 
 .teachers .search-tutor button {
